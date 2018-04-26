@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+
+<form action="#" th:action="@{/processartist}" th:object="${artist}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+
+    Artist Full Name:<input type="text" th:field="*{fullName}"/>
+
+    Artist Stage Name:<input type="text" th:field="*{stageName}"/>
+
+    Artist Image:<input type="text" th:field="*{image}"/>
+
+    <input type="submit" value="Submit"/>
+
+</form>
+</body>
+</html>

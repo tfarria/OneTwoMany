@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/artist">Add an Artist</a>
+<a href="/song">Add a Song</a>
+
+<div th:each="artist : ${artists}">
+    <h1 th:text="${artist.stageName}"></h1>
+    <h2 th:text="${artist.fullName}"></h2>
+    <img src="/img/houston.jpg" alt="face.stalley">
+    <div th:each="song : ${artist.songs}">
+        <li th:inline="text"><b>[[${song.title}]]</b>was released in [[${song.yearReleased}]]<b>[[${song.leadArtist}]]</b>is the lead artist.</li>
+    </div>
+</div>
+</body>
+</html>

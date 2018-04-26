@@ -17,7 +17,7 @@ public class Artist {
 
     private String image;
 
-    @OneToMany(mappedBy = "artist",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "artist",fetch = FetchType.EAGERgit)
     public Set<Song> songs;
 
     public long getId() {
